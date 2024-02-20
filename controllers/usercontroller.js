@@ -1,5 +1,5 @@
 const User = require('../models/userModel');
-const factory = require('../controllers/handlerFactory');
+const factory = require('./handlerFactory');
 const catchAsync = require('../utils/catchAsync');
 const multer = require('multer');
 const jwt = require('jsonwebtoken');
