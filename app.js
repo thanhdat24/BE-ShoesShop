@@ -50,7 +50,13 @@ const limiter = rateLimit({
 });
 app.use('/api', limiter);
 
-app.use(cors());
+const corsOptions = {
+  origin: 'http://localhost:3030', // Thay đổi theo origin cụ thể của bạn
+  credentials: true, // Điều này cho phép session cookie từ các requests qua domains
+};
+
+app.use(cors(corsOptions));
+
 app.use(express.json({ limit: '50mb' }));
 
 app.use((req, res, next) => {
