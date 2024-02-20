@@ -51,8 +51,11 @@ const limiter = rateLimit({
 app.use('/api', limiter);
 
 const corsOptions = {
-  origin: 'https://fe-shoes-shop.vercel.app', // Thay đổi theo origin cụ thể của bạn
-  credentials: true, // Điều này cho phép session cookie từ các requests qua domains
+  origin: [
+    'https://fe-shoes-shop.vercel.app',
+    'https://vn-open-api-provinces-delta.vercel.app',
+  ],
+  credentials: true,
 };
 
 app.use(cors(corsOptions));
