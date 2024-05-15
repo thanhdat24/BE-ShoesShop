@@ -52,7 +52,7 @@ app.use('/api', limiter);
 
 const corsOptions = {
   origin: [
-    'https://fe-shoes-shop.vercel.app',
+    'https://shoes-shop-webapp.vercel.app',
     'https://vn-open-api-provinces-delta.vercel.app',
   ],
   credentials: true,
